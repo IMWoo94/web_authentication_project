@@ -10,8 +10,10 @@ import org.springframework.stereotype.Service;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
 public class JwtService {
 
 	private static String secretKey = "";
@@ -37,7 +39,18 @@ public class JwtService {
 	/**
 	 * JWT 검증
 	 */
-	public void validation(){
+	public void validation(String token){
+		var key = Keys.hmacShaKeyFor(secretKey.getBytes());
+
+		var parser = Jwts.parserBuilder()
+			.setSigningKey(key)
+			.build();
+
+		var result = parser.parseClaimsJws(token);
+
+		result.getBody().entrySet().forEach(value ->{
+			log.info("key : {}, value : {}", value.getKey(), value.getValue());
+		});
 
 	}
 
