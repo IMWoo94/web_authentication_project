@@ -34,7 +34,7 @@ class JwtApplicationTests {
 
 	@Test
 	void tokenValidation(){
-		var token = "eaJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5MjMsImV4cCI6MTcwNTkwODMwNH0.ZPtYmd_nQz5Uc1S1uXOzbri4CptCELPJUl5hhYGBTGc";
+		var token = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5MjMsImV4cCI6MTcwNTkwODc3M30.1So3lXVHWoYA_1965ydT9us8OKIwU_pOC1Ast_YHEFo2";
 
 		// 토큰 만료 예외
 		/**
