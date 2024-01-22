@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class JwtService {
 
-	private static String secretKey = "";
+	private static String secretKey = "java17SpringBootJWTTokenIssueMethodMySecretKey";
 
 	/**
 	 * JWT 생성
