@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.cookie.db.UserRepository;
-import com.example.cookie.model.UserDto;
+import com.example.httpHeader.db.UserRepository;
+import com.example.httpHeader.model.UserDto;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
