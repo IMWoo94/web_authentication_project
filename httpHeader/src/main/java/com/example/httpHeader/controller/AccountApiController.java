@@ -10,6 +10,7 @@ import com.example.httpHeader.service.UserService;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -22,7 +23,8 @@ public class AccountApiController {
 	@PostMapping("/login")
 	public String login(
 		@RequestBody LoginRequest loginRequest,
-		HttpServletResponse response
+		HttpServletResponse response,
+		HttpSession httpSession
 	){
 		return userService.login(loginRequest, response);
 
