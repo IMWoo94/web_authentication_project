@@ -1,4 +1,4 @@
-package com.example.cookie.controller;
+package com.example.httpHeader.controller;
 
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,12 +1,12 @@
-package com.example.cookie.controller;
+package com.example.httpHeader.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.cookie.model.LoginRequest;
-import com.example.cookie.service.UserService;
+import com.example.httpHeader.model.LoginRequest;
+import com.example.httpHeader.service.UserService;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletResponse;
@@ -20,11 +20,11 @@ public class AccountApiController {
 	private final UserService userService;
 
 	@PostMapping("/login")
-	public void login(
+	public String login(
 		@RequestBody LoginRequest loginRequest,
 		HttpServletResponse response
 	){
-		userService.login(loginRequest, response);
+		return userService.login(loginRequest, response);
 
 	}
 }

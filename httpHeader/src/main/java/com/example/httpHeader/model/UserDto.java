@@ -1,4 +1,4 @@
-package com.example.cookie.model;
+package com.example.httpHeader.model;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;

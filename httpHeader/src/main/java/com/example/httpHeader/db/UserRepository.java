@@ -1,4 +1,4 @@
-package com.example.cookie.db;
+package com.example.httpHeader.db;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
-import com.example.cookie.model.UserDto;
+import com.example.httpHeader.model.UserDto;
 
 import jakarta.annotation.PostConstruct;
 
